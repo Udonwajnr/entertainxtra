@@ -37,7 +37,7 @@ export default function MovieCarousel(){
                             <span className="lg:text-xs text-sm text-center">2h 6m</span>
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
-                        <div className='grid grid-cols-2 w-[300px] gap-x-4 lg:gap-x-10 mt-5'>
+                        <div className='grid grid-cols-2 max-w-[300px] gap-x-4 lg:gap-x-10 mt-5'>
                             <Link href={'/'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-center items-center text-xl md:text-sm'>
                             {/* <FaPlay size={25}/> */}
                              Play Now
@@ -65,7 +65,7 @@ export default function MovieCarousel(){
                             <span className="lg:text-xs text-sm">2h 6m</span>
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
-                        <div className='grid grid-cols-2 w-[300px] gap-x-4 lg:gap-x-10 mt-5'>
+                        <div className='grid grid-cols-2 max-w-[300px] gap-x-4 lg:gap-x-10 mt-5'>
                             <Link href={'/'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-center items-center text-xl md:text-sm'>
                             {/* <FaPlay size={25}/> */}
                              Play Now
@@ -93,7 +93,7 @@ export default function MovieCarousel(){
                             <span className="lg:text-xs text-sm text-center">2h 6m</span>
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
-                        <div className='grid grid-cols-2 w-[300px] gap-x-4 lg:gap-x-10 mt-5'>
+                        <div className='grid grid-cols-2 max-w-[300px] gap-x-4 lg:gap-x-10 mt-5'>
                             <Link href={'/'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-center items-center text-xl md:text-sm'>
                             {/* <FaPlay size={25}/> */}
                              Play Now
