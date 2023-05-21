@@ -5,9 +5,9 @@ export default function MovieCard(){
     return (
         <>
     <Link href={'/description'} >
-      <div className='text-white max-w-movie-card h-80 grow'>
+      <div className='text-white max-w-xs grow'>
           <div className='h-5/6 flex '>
-                <Image src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" alt="Movie Name" className='' width={"176"} height={"100"} />
+                <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" alt="Movie Name" className='w-full' />
           </div>
           <div>
               <h2 className='text-xl font-bold'>IRON DOOR</h2>

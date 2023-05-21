@@ -19,7 +19,6 @@ export default function Trending({toggle}){
             </div>
             <div className="">
                 <MovieTabBody toggleTab={toggleTab} toggleState={toggleState}/>
-
             </div>
         </section>
     )
