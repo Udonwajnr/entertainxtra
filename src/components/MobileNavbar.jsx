@@ -6,7 +6,7 @@ export default function MobileNavbar({toggle}){
         <header className="  w-96 top-[75px] bg-black fixed z-30  h-screen hidden lg:block">
             <nav className="mt-5 px-4">
               <div>
-                    <ul className="flex flex-col gap-y-3 lg:gap-y-10 h-full">
+                    <ul className="flex flex-col gap-y-3 lg:gap-y-10 h-screen">
                         <li><Link href={'/'} className="flex items-center gap-x-2 text-white hover:text-red duration-150 text-lg">
                             <AiFillHome size={25}/>
                             Home
