@@ -23,7 +23,8 @@ export default function MovieDescription(){
 
             <div className='w-10/12 px-10 lg:px-2 lg:w-full lg:mt-5'>
               <h1 className='text-5xl font-bold lg:text-center'>THE DARK KNIGHT RISES</h1>
-              <div className='flex items-center lg:justify-center mt-8 gap-x-5 text-gray-400'>
+              {/* comeback here */}
+              <div className='flex items-center justify-between lg:justify-between mt-8 gap-x-5 text-gray-400'>
                 <span className='flex items-center text-xl lg:text-xs gap-x-2'>
                   <AiOutlineUser size={25}/>
                   +18
@@ -56,10 +57,10 @@ export default function MovieDescription(){
 
         {/* change it to the cloud player */}
               <div className='grid grid-cols-3 gap-x-3 lg:gap-x-1 mt-8 justify-between items-center'>
-                <Link href={'/play'} className="bg-red justify-center px-7 lg:px-3 lg:rounded-md py-2.5 text-xl flex items-center gap-x-2 lg:text-xs"><BiDownload  className='w-7 h-7 lg:w-3 lg:h-3'/> Download</Link>
+                <Link href={'/play'} className="bg-red justify-center px-7 lg:px-3 lg:rounded-md py-2.5 text-xl flex items-center gap-x-2 lg:text-xs"><BiDownload  className='w-7 h-7 lg:w-5 lg:h-5'/> Download</Link>
                 {/* <button to={'/play'} className="bg-[#ff0000]">My List</button> */}
-                <button to={'/play'} className="bg-red text-center justify-center px-7 lg:px-3 lg:rounded-md py-2.5 text-xl flex items-center gap-x-2 lg:text-xs"><BiCameraMovie className='w-7 h-7 lg:w-3 lg:h-3'/> Trailer</button>
-                <button to={'/play'} className="bg-red justify-center px-7 lg:px-3 py-2.5 text-xl lg:rounded-md flex items-center gap-x-2 lg:text-xs"><FaShareAlt className='w-7 h-7 lg:w-3 lg:h-3'/> Share</button>
+                <button to={'/play'} className="bg-red text-center justify-center px-7 lg:px-3 lg:rounded-md py-2.5 text-xl flex items-center gap-x-2 lg:text-xs"><BiCameraMovie className='w-7 h-7 lg:w-5 lg:h-5'/> Trailer</button>
+                <button to={'/play'} className="bg-red justify-center px-7 lg:px-3 py-2.5 text-xl lg:rounded-md flex items-center gap-x-2 lg:text-xs"><FaShareAlt className='w-7 h-7 lg:w-5 lg:h-5'/> Share</button>
               </div>
         {/* change it to the cloud player */}
             </div>
