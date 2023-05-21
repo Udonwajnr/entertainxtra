@@ -10,14 +10,14 @@ export default function MovieCard(){
                 <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" alt="Movie Name" className='w-full' />
           </div>
           <div>
-              <h2 className='text-xl font-bold'>IRON DOOR</h2>
+              <h2 className='text-xl font-bold lg:text-sm'>IRON DOOR</h2>
               <div className='flex gap-x-3 items-center justify-between'>
                 <div className='flex items-center gap-x-2 '>
-                  <span>2021</span>
-                  <span>+18</span>
-                  <span className='font-bold'>HD</span>
+                  <span className="lg:text-xs text-sm">2021</span>
+                  <span className="lg:text-xs text-sm">+18</span>
+                  <span className='font-bold lg:text-xs text-sm'>HD</span>
                 </div>
-                  <span className='border border-red-500 px-1'>Movie</span>
+                  <span className='border border-red-500 px-1 text-sm lg:text-xs'>Movie</span>
               </div>
           </div>
           </div>
