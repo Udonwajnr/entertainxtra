@@ -22,8 +22,8 @@ export default function Register(){
                         </div>
                     
                         <div className='flex flex-col gap-y-1'>
-                            <label htmlFor="" className='text-white'>Password</label>
-                            <input type="password" className='py-2 px-2 focus:bg-[#0f0d0d] text-[#959595] bg-bodyBg border border-white rounded outline-none focus:border-red-500 text-[#959595]'  placeholder='Password' required/>
+                            <label htmlFor="" className='text-white'>Repeat Password</label>
+                            <input type="password" className='py-2 px-2 focus:bg-[#0f0d0d] text-[#959595] bg-bodyBg border border-white rounded outline-none focus:border-red-500'  placeholder='Password' required/>
                         </div>
 
                         <div className='flex justify-between items-center text-white'>
@@ -38,7 +38,7 @@ export default function Register(){
                         </div>
                         <button type='submit' className='text-white rounded-md bg-red hover:bg-rose-700 py-2'>Submit</button>
                         
-                        <small className='text-center text-white text-base'>Already registered ? <Link href={'/login'} className="text-red-500">Login</Link></small>
+                        <small className='text-center text-white text-base'>Already registered ? <Link href={'/login'} className="text-red">Login</Link></small>
                     </form>
                 </div>
             </div>
