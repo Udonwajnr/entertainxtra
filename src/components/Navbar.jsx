@@ -19,7 +19,7 @@ export default function Navbar({active, toggle, toggleSearchBar}){
                }
             </div>
                 <div className="logo text-3xl text-white" >
-                    Logo
+                    <Link href={'/'} className="text-bold text-red">EntertainXtra</Link>
                 </div>
 
                 <div className="lg:hidden">

@@ -17,7 +17,7 @@ export default function MovieCard(){
                   <span className="lg:text-xs text-sm">+18</span>
                   <span className='font-bold lg:text-xs text-sm'>HD</span>
                 </div>
-                  <span className='border border-red-500 px-1 text-sm lg:text-xs'>Movie</span>
+                  <span className='border px-1 text-sm lg:text-xs'>Movie</span>
               </div>
           </div>
           </div>

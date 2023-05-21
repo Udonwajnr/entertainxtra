@@ -27,7 +27,7 @@ export default function Movies(){
                         <MovieFilter/>
                     }
                 </div>
-                <div className="grid grid-cols-fluid  gap-5 mt-5">
+                <div className="grid grid-cols-fluid gap-4 sm:grid-cols-2 mt-5">
                     <MovieCard/>
                     <MovieCard/>
                     <MovieCard/>
