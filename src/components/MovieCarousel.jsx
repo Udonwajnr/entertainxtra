@@ -28,17 +28,17 @@ export default function MovieCarousel(){
                     <div className='hero-img absolute w-full h-screen -z-10'>
                         <img src="https://images.unsplash.com/photo-1598501479146-ef2b41258663?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="" className=' w-full h-screen object-cover'/> 
                     </div>
-                    <div className='  text-white max-w-xl px-8 lg:px-2'>
+                    <div className='text-white max-w-xl px-8 lg:px-2'>
                         <span className='bg-yellow-500 text-2xl font-bold p-1 rounded'>New</span>
-                        <h1 className='text-7xl font-bold mt-5'>StarWars</h1>
+                        <h1 className='text-7xl font-bold mt-5 lg:text-2xl'>StarWars</h1>
                         <div className='text-white flex gap-x-3 mt-5'>
-                            <span>2021</span>
-                            <span className='border rounded border-red-500 px-1'>+18</span>
-                            <span>2h 6m</span>
+                            <span className="lg:text-xs text-sm">2021</span>
+                            <span className='border rounded text-sm lg:text-xs' >+18</span>
+                            <span className="lg:text-xs text-sm">2h 6m</span>
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
                         <div className='flex gap-x-4 lg:gap-x-10 mt-5'>
-                            <Link href={'/'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 items-center text-xl'>
+                            <Link href={'/'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-between items-center text-xl'>
                             {/* <FaPlay size={25}/> */}
                              Play Now
                              </Link>
