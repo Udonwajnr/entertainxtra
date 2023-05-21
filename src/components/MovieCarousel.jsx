@@ -31,10 +31,10 @@ export default function MovieCarousel(){
                     <div className='text-white max-w-xl px-8 lg:px-2'>
                         <span className='bg-yellow-500 text-2xl font-bold p-1 rounded'>New</span>
                         <h1 className='text-7xl font-bold mt-5 lg:text-2xl'>StarWars</h1>
-                        <div className='text-white flex justify-start items-center  gap-x-3 mt-5'>
-                            <span className="lg:text-xs text-sm">2021</span>
-                            <span className='border rounded text-sm lg:text-xs px-1'>+18</span>
-                            <span className="lg:text-xs text-sm">2h 6m</span>
+                        <div className='text-white grid grid-cols-3  gap-x-2 mt-5 max-w-[150px]'>
+                            <span className="lg:text-xs text-sm text-center">2021</span>
+                            <span className='border rounded text-sm lg:text-xs text-center'>+18</span>
+                            <span className="lg:text-xs text-sm text-center">2h 6m</span>
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
                         <div className='grid grid-cols-2 w-[300px] gap-x-4 lg:gap-x-10 mt-5'>
@@ -87,10 +87,10 @@ export default function MovieCarousel(){
                        <div className='text-white max-w-xl px-8 lg:px-2'>
                         <span className='bg-yellow-500 text-2xl font-bold p-1 rounded'>New</span>
                         <h1 className='text-7xl font-bold mt-5 lg:text-2xl'>StarWars</h1>
-                        <div className='text-white flex justify-start items-center  gap-x-3 mt-5'>
-                            <span className="lg:text-xs text-sm">2021</span>
-                            <span className='border rounded text-sm lg:text-xs px-1'>+18</span>
-                            <span className="lg:text-xs text-sm">2h 6m</span>
+                        <div className='text-white grid grid-cols-3  gap-x-2 mt-5 max-w-[150px]'>
+                            <span className="lg:text-xs text-sm text-center">2021</span>
+                            <span className='border rounded text-sm lg:text-xs text-center'>+18</span>
+                            <span className="lg:text-xs text-sm text-center">2h 6m</span>
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
                         <div className='grid grid-cols-2 w-[300px] gap-x-4 lg:gap-x-10 mt-5'>
