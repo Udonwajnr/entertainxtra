@@ -12,7 +12,7 @@ export default function Home() {
   }
 
   return (
-    <main className=" min-h-screen ">
+    <main className=" min-h-screen relative">
       <MovieHero/>
       <Trending toggle={toggle}/>
       <LatestMovies/>

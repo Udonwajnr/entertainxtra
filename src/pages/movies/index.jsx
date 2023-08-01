@@ -1,15 +1,32 @@
 import MovieCard from "@/components/MovieCard"
 import {BiFilter} from 'react-icons/bi'
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import MovieFilter from "@/components/MovieFilter"
+import axios from "axios"
 
 export default function Movies(){
     const [active, setActive] = useState(false)
+    const [movies,setMovies] = useState([])
+    const [done,setDone] = useState(false)
+
+    const getMovies =async()=>{
+        try{
+            await axios.get("https://api-cnl3.onrender.com/api/movies")
+            .then((res)=>{
+                setMovies(res?.data?.movie)
+            })
+        }catch(error){
+            console.log("couldn't fetch data")
+        }
+    }
+
+    useEffect(()=>{
+        getMovies()
+    },[])
 
     const toggle =()=>{
     return setActive(!active)
     }
-
     return (
         <main>
             <section className="px-8 py-5 lg:px-2">
@@ -27,19 +44,14 @@ export default function Movies(){
                         <MovieFilter/>
                     }
                 </div>
-                <div className="grid grid-cols-fluid gap-4 sm:grid-cols-2 mt-5">
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-
+                <div className="flex justify-start space-x-3 flex-wrap">
+                    {
+                        movies.map((movie,index)=>{
+                            return(
+                                <MovieCard key={index} {...movie} movie={movie} />
+                            )
+                        })
+                    }
                 </div>
             </section>
         </main>

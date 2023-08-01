@@ -1,12 +1,12 @@
-import MovieCard from "./MovieCard"
 import MovieTabBody from "./MovieTabBody"
 import MovieTab from "./MovieTabs"
-import { useState } from "react"
-import {BsPlayCircle,BsListUl} from 'react-icons/bs'
-
+import { useState,useEffect } from "react"
 
 export default function Trending({toggle}){
     const [toggleState, setToggleState] = useState(1);
+
+    useEffect(()=>{
+    },[])
 
     const toggleTab = (index) => {
         setToggleState(index);

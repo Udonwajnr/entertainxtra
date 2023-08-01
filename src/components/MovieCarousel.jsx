@@ -38,7 +38,7 @@ export default function MovieCarousel(){
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
                         <div className='flex space-x-4 gap-x-4 mt-5'>
-                            <Link href={'/description'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-between items-center text-xl'>
+                            <Link href={''} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-between items-center text-xl'>
                             {/* <FaPlay size={25}/> */}
                              Details
                              </Link>
@@ -66,7 +66,7 @@ export default function MovieCarousel(){
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
                         <div className='flex space-x-4 gap-x-4 mt-5'>
-                            <Link href={'/description'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-between items-center text-xl'>
+                            <Link href={'/'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-between items-center text-xl'>
                             {/* <FaPlay size={25}/> */}
                              Details
                              </Link>
@@ -94,7 +94,7 @@ export default function MovieCarousel(){
                         </div>
                         <p className='mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit at architecto ducimus harum neque recusandae itaque eaque totam sapiente expedita voluptates ipsam ipsum ad doloremque fuga dicta enim. Tempore!</p>
                         <div className='flex space-x-4 gap-x-4 mt-5'>
-                            <Link href={'/description'} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-between items-center text-xl'>
+                            <Link href={''} className='py-2 px-3 flex rounded-md bg-red gap-x-2 justify-between items-center text-xl'>
                             {/* <FaPlay size={25}/> */}
                              Details
                              </Link>
