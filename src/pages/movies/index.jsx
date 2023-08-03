@@ -3,16 +3,20 @@ import {BiFilter} from 'react-icons/bi'
 import { useState,useEffect } from "react"
 import MovieFilter from "@/components/MovieFilter"
 import axios from "axios"
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import LoadingSkeleton from "@/components/Loading"
 
 export default function Movies(){
     const [active, setActive] = useState(false)
     const [movies,setMovies] = useState([])
-    const [done,setDone] = useState(false)
+    const [loading,setLoading] = useState(true)
 
     const getMovies =async()=>{
         try{
             await axios.get("https://api-cnl3.onrender.com/api/movies")
             .then((res)=>{
+                setLoading(false)
                 setMovies(res?.data?.movie)
             })
         }catch(error){
@@ -28,7 +32,7 @@ export default function Movies(){
     return setActive(!active)
     }
     return (
-        <main>
+        <main className="">
             <section className="px-8 py-5 lg:px-2">
                 <div className="flex justify-between mt-5">
                     <h2 className="text-white text-3xl lg:text-xl">Movies</h2>
@@ -44,13 +48,18 @@ export default function Movies(){
                         <MovieFilter/>
                     }
                 </div>
-                <div className="flex justify-start space-x-3 flex-wrap">
+                <div className="flex justify-start gap-x-3 gap-y-3 flex-wrap lg:justify-around mt-5">
                     {
+                    !loading
+                     ?
                         movies.map((movie,index)=>{
                             return(
                                 <MovieCard key={index} {...movie} movie={movie} />
                             )
                         })
+                        :                        
+                            <LoadingSkeleton/>
+                            // count={4}
                     }
                 </div>
             </section>

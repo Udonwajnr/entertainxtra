@@ -6,9 +6,9 @@ export default function RelatedMovies({genre,movie}){
     <section className="py-5">
         <div className=' mt-8 px-10 lg:px-2'>
             <div className='mt-4'>
-                <h2 className='text-3xl text-white'>Related Movies</h2>
+                <h2 className='text-3xl text-white text-center'>Related Movies</h2>
             </div>
-            <div className="grid grid-cols-fluid gap-4 md:grid-cols-2 mt-5">
+            <div className="flex justify-start gap-x-3 gap-y-3 flex-wrap lg:justify-around mt-5">
                 {
                     movie.filter((movie)=>{
                         return movie.genre[0].includes(" Action") == genre[0].includes(" Action")

@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
-export default function MovieDescription({title,image,year,video_quality,trailer_url,language,length_of_video,description,actors,subtitle_link,file_link,genre,movie}){
+export default function MovieDescription({title,image,year,video_quality,trailer_url,language,length_of_video,description,actors,subtitle_link,file_link,genre,movie,country}){
   const [video,setVideo] = useState(false)
   
   const playTrailer =()=>{
@@ -16,7 +16,7 @@ export default function MovieDescription({title,image,year,video_quality,trailer
   }
   return(
         <div className=''>
-          <div className='flex items-center text-white px-8   py-5 mt-10 lg:flex-col lg:px-2'>
+          <div className='flex items-center text-white px-8 py-5 mt-10 lg:mt-0 lg:flex-col lg:px-2'>
            {/* comming back */}
             <div className='w-2/12 lg:w-full ' >
               <img src={image} alt=""  className='w-full'/>
@@ -28,28 +28,28 @@ export default function MovieDescription({title,image,year,video_quality,trailer
             </div>
 
             <div className='w-10/12 px-10 lg:px-2 lg:w-full lg:mt-5'>
-              <h1 className='text-5xl font-bold lg:text-center'>{title}</h1>
+              <h1 className='text-5xl font-bold lg:text-center lg:text-xl'>{title}</h1>
               {/* comeback here */}
-              <div className='flex items-center justify-between lg:justify-between mt-8 gap-x-5 text-gray-400'>
-                <span className='flex items-center text-xl lg:text-xs gap-x-2'>
-                  <AiOutlineUser size={25}/>
-                  +18
-                </span>
-                <span className='flex items-center text-xl lg:text-xs gap-x-2'>
-                  <BiTime size={25}/>
-                  {length_of_video}
-                </span>
-                <span className='flex items-center text-xl lg:text-xs gap-x-2'>
-                  <GoGlobe size={25}/>
-                   United States
-                </span>
-              </div>
+            
               <article className='mt-8 text-base'>
                 {description}
               </article>
 
-              <div className='mt-5 flex gap-x-3 '>
-                <div className='w-3/12 lg:w-6/12'>
+              <div className='mt-5 flex gap-x-3 lg:flex-col lg:gap-y-3 flex-wrap space-y-2'>
+              <div className='w-3/12 lg:w-full'>
+                    <h3 className='font-bold text-2xl lg:text-base'>Year</h3>
+                    <span className='lg:text-base'>{year}</span>
+                  </div>
+
+                  <div className='w-3/12 lg:w-full'>
+                    <h3 className='font-bold text-2xl lg:text-base'>Movie Time</h3>
+                    <span className='lg:text-base'>{length_of_video}</span>
+                  </div>
+                  <div className='w-3/12 lg:w-full'>
+                    <h3 className='font-bold text-2xl lg:text-base'>Country</h3>
+                    <span className='lg:text-base'>{country|| "United States"}</span>
+                  </div>
+                <div className='w-3/12 lg:w-full'>
                       <h3 className='font-bold text-2xl lg:text-base'>Genre</h3>
                       <span className='lg:text-base'>
                       {
@@ -62,12 +62,12 @@ export default function MovieDescription({title,image,year,video_quality,trailer
                       </span>
                     </div>
                     
-                  <div className='w-3/12 lg:w-6/12'>
+                  <div className='w-3/12 lg:w-full'>
                     <h3 className='font-bold text-2xl lg:text-base'>Director</h3>
-                    <span className='lg:text-xs'>Christopher Nolan</span>
+                    <span className='lg:text-base'>Christopher Nolan</span>
                   </div>
                   
-                  <div className='w-3/12 lg:w-6/12'>
+                  <div className='w-3/12 lg:w-full'>
                     <h3 className='font-bold text-2xl lg:text-base'>Cast</h3>
                     <span className='lg:text-base'>
                       
