@@ -16,26 +16,26 @@ export default function MovieDescription({title,image,year,video_quality,trailer
   }
   return(
         <div className=''>
-          <div className='flex items-center text-white px-8 py-5 mt-10 lg:mt-0 lg:flex-col lg:px-2'>
+          <div className='flex items-center text-white px-8 py-5 mt-10 lg:mt-0 md:flex-col lg:px-2'>
            {/* comming back */}
             <div className='w-2/12 lg:w-full ' >
               <img src={image} alt=""  className='w-full'/>
-              <div className='flex justify-between mt-7 font-bold text-gray-400'>
+              {/* <div className='flex justify-between mt-7 font-bold text-gray-400'>
                 <span className="lg:text-xs text-sm">1080p</span>
                 <span className="lg:text-xs text-sm">{video_quality}</span>
                 <span className="lg:text-xs text-sm">7.1</span>
-              </div>  
+              </div>   */}
             </div>
 
             <div className='w-10/12 px-10 lg:px-2 lg:w-full lg:mt-5'>
               <h1 className='text-5xl font-bold lg:text-center lg:text-xl'>{title}</h1>
               {/* comeback here */}
             
-              <article className='mt-8 text-base'>
+              <article className='mt-3 text-base'>
                 {description}
               </article>
 
-              <div className='mt-5 flex gap-x-3 lg:flex-col lg:gap-y-3 flex-wrap space-y-2'>
+              <div className='mt-5 flex gap-x-3 lg:flex-col lg:gap-y- flex-wrap space-y-2'>
               <div className='w-3/12 lg:w-full'>
                     <h3 className='font-bold text-2xl lg:text-base'>Year</h3>
                     <span className='lg:text-base'>{year}</span>
@@ -47,7 +47,12 @@ export default function MovieDescription({title,image,year,video_quality,trailer
                   </div>
                   <div className='w-3/12 lg:w-full'>
                     <h3 className='font-bold text-2xl lg:text-base'>Country</h3>
-                    <span className='lg:text-base'>{country|| "United States"}</span>
+                    <span className='lg:text-base'>{country || "United States"}</span>
+                  </div>
+
+                  <div className='w-3/12 lg:w-full'>
+                    <h3 className='font-bold text-2xl lg:text-base'>Video Quality</h3>
+                    <span className='lg:text-base'>{video_quality || 1080}</span>
                   </div>
                 <div className='w-3/12 lg:w-full'>
                       <h3 className='font-bold text-2xl lg:text-base'>Genre</h3>
@@ -83,7 +88,7 @@ export default function MovieDescription({title,image,year,video_quality,trailer
               </div>
 
         {/* change it to the cloud player */}
-              <div className='grid grid-cols-3 gap-x-3 lg:gap-x-1 mt-8 justify-between items-center'>
+              <div className='grid grid-cols-3 gap-x-3 lg:gap-x-1 mt-8  lg:mt-5 justify-between items-center'>
                 <Link href={file_link} className="bg-red justify-center px-7 lg:px-3 lg:rounded-md py-2.5 text-xl flex items-center gap-x-2 lg:text-xs"><BiDownload  className='w-7 h-7 lg:w-5 lg:h-5'/> Download</Link>
                 {/* <button to={'/play'} className="bg-[#ff0000]">My List</button> */}
 
