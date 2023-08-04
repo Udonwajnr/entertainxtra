@@ -102,8 +102,8 @@ export default function MovieDescription({title,image,year,video_quality,trailer
         {
           video
            &&
-          <div className='w-full h-screen bg-black absolute z-40 top-0 flex justify-center items-center'>
-            <button className='text-lg absolute top-0 right-0 text-red' onClick={playTrailer}>
+          <div className='w-full h-screen bg-black fixed z-40 top-0 flex justify-center items-center'>
+            <button className='text-lg absolute top-0 right-0 text-white' onClick={playTrailer}>
               <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="m8 8l32 32M8 40L40 8"></path></svg>
             </button>
             <iframe width="560" height="315" src={trailer_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
