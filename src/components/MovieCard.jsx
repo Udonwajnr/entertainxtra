@@ -4,12 +4,12 @@ export default function MovieCard({title,image,year,video_quality ,uuid}){
     return (
       <>
     <Link href={`/movies/details/${uuid}`} >
-      <div className='text-white max-w-[190px]'>
+      <div className='text-white max-w-[160px]'>
           <div className='flex'>
-                <img src={image} alt="Movie Name" className='w-full' />
+                <img src={image} alt="Movie Name" className='w-full h-full' />
           </div>
           <div>
-              <h2 className='text-base font-bold lg:text-sm'>{title?.length>25?title.slice(0,23)+'...':title }</h2>
+              <h2 className='text-sm font-bold lg:text-xs'>{title?.length>25?title.slice(0,23)+'...':title }</h2>
               <div className='flex gap-x-3 items-center justify-between'>
                 <div className='flex items-center gap-x-2 '>
                   <span className="lg:text-xs text-sm">{year}</span>

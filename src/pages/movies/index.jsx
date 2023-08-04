@@ -36,8 +36,8 @@ export default function Movies(){
             <section className="px-8 py-5 lg:px-2">
                 <div className="flex justify-between mt-5">
                     <h2 className="text-white text-3xl lg:text-xl">Movies</h2>
-                    <button onClick={toggle} className="flex gap-x-1 items-center text-xl border bg-white p-2 rounded-md lg:text-base">
-                        <BiFilter size={30} />
+                    <button onClick={toggle} className="flex gap-x-1 items-center text-xl border bg-white p-2 lg:p-0.5 rounded-md lg:text-sm">
+                        <BiFilter size={25} />
                         Filters
                     </button>
                 </div>
@@ -48,9 +48,9 @@ export default function Movies(){
                         <MovieFilter/>
                     }
                 </div>
-                <div className="flex justify-start gap-x-3 gap-y-3 flex-wrap lg:justify-around mt-5">
+                <div className="flex justify-center  flex-wrap gap-x-3 gap-y-3 mt-5">
                     {
-                    !loading
+                   !loading
                      ?
                         movies.map((movie,index)=>{
                             return(
@@ -61,7 +61,7 @@ export default function Movies(){
                             <LoadingSkeleton/>
                             // count={4}
                     }
-                </div>
+            </div>
             </section>
         </main>
     )
