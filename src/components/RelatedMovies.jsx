@@ -18,7 +18,7 @@ export default function RelatedMovies({genre,movie}){
                      )   
                     })
                 }
-                <SeriesCard/>
+                {/* <SeriesCard/> */}
                 {/* <SeriesCard/>
                 <SeriesCard/>
                 <SeriesCard/>

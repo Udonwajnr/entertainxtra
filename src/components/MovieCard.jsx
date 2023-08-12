@@ -10,7 +10,7 @@ export default function MovieCard({title,image,year,video_quality ,uuid}){
           </div>
           <div>
               <h2 className='text-sm font-bold lg:text-xs'>{title?.length>25?title.slice(0,23)+'...':title }</h2>
-              <div className='flex gap-x-3 items-center justify-between'>
+              <div className='flex gap-x-3 items-center justify-between mt-1'>
                 <div className='flex items-center gap-x-2 '>
                   <span className="lg:text-xs text-sm">{year}</span>
                   {/* <span className="lg:text-xs text-sm">+18</span> */}

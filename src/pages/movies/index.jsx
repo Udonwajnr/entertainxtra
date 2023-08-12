@@ -3,7 +3,6 @@ import {BiFilter} from 'react-icons/bi'
 import { useState,useEffect } from "react"
 import MovieFilter from "@/components/MovieFilter"
 import axios from "axios"
-import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import LoadingSkeleton from "@/components/Loading"
 

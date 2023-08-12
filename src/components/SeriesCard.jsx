@@ -1,20 +1,20 @@
 import Link from "next/link"
-export default function SeriesCard(){
+export default function SeriesCard({title,year,video_quality,image,uuid}){
     return(
         <>
-    <Link href={'/'} to='/movie/titl'>
-      <div className='text-white max-w-[200px] grow'>
-          <div className='h-5/6 flex '>
-                <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" alt="Movie Name" className='w-full w-50' />
+    <Link href={'/'}>
+      <div className='text-white max-w-[160px]'>
+          <div className='flex '>
+                <img src={image} alt="Series Name" className='w-full h-full' />
           </div>
           <div>
-              <h2 className='text-lg font-bold lg:text-sm'>IRON DOOR</h2>
+              <h2 className='text-sm font-bold lg:text-xs'>{title?.length>25?title.slice(0,23)+'...':title } </h2>
               <div className='flex gap-x-3 items-center justify-between'>
-                <div className='flex items-center justify-start gap-x-3 '>
-                  <span className="lg:text-xs text-sm">S1:E2</span>
+                <div className='flex items-center justify-start gap-x-3 mt-1'>
+                  {/* <span className="lg:text-xs text-sm">S1:E2</span> */}
                   {/* <span className="lg:text-xs text-sm">:</span> */}
                   {/* <span className="lg:text-xs text-sm">E1</span> */}
-                  <span className="lg:text-xs text-sm font-bold">HD</span>
+                  <span className="font-bold lg:text-xs text-sm">{video_quality}</span>
                 </div>
                   <span className='border px-1 text-sm lg:text-xs'>Series</span>
               </div>

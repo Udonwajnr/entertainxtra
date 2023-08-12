@@ -3,6 +3,7 @@ import MovieHero from '@/components/MovieHero'
 import Trending from '@/components/TrendingMovies'
 import LatestSeries from '@/components/LatestSeries'
 import { useState } from 'react'
+import LatestSeasonal from '@/components/LatestSeasonal'
 
 export default function Home() {
  const [active,setActive] = useState(false)
@@ -13,9 +14,10 @@ export default function Home() {
 
   return (
     <main className=" min-h-screen relative">
-      <MovieHero/>
+      {/* <MovieHero/> */}
       <Trending toggle={toggle}/>
       <LatestMovies/>
+      <LatestSeasonal/>
       <LatestSeries/>
     </main>
   )
