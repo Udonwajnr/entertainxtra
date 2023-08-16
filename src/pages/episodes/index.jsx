@@ -6,6 +6,7 @@ import LoadingSkeleton from "@/components/Loading"
 import Filter from "@/components/FIlter"
 
 export default function Episodes(){
+
     const [active, setActive] = useState(false)
     const [episode,setEpisode] = useState([])
     const [searchEpisode,setSearchEpisode] = useState("")
@@ -23,7 +24,6 @@ export default function Episodes(){
                 setEpisode(res.data.episodes)
                 setLoading(false)
             })
-
         }catch(error){
             setLoading(true)
             console.log("couldn't fetch data")

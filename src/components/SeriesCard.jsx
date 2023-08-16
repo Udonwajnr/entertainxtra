@@ -2,7 +2,7 @@ import Link from "next/link"
 export default function SeriesCard({title,year,video_quality,image,uuid}){
     return(
         <>
-    <Link href={'/'}>
+    <Link href={`/episodes/details/${uuid}`}>
       <div className='text-white max-w-[160px]'>
           <div className='flex '>
                 <img src={image} alt="Series Name" className='w-full h-full' />

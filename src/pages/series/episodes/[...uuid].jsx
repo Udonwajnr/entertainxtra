@@ -11,8 +11,6 @@ export default function SeasonalEpisodes(){
     const router = useRouter()
     const {uuid} = router.query
 
-    // console.log(uuid)/
-    
     const getSeasonalEpisodes = async()=>{
         try{
             await axios.get(`https://api-cnl3.onrender.com/api/seasonal/${uuid}`)
@@ -26,8 +24,8 @@ export default function SeasonalEpisodes(){
     }
     useEffect(()=>{
         getSeasonalEpisodes()
+        
     },[])
-
 
     return (
         <section className="mt-20 px-8 lg:px-2">
@@ -42,7 +40,7 @@ export default function SeasonalEpisodes(){
                             )
                         })
                         :                        
-                            <LoadingSkeleton/>
+                       <LoadingSkeleton/>
                 }
             </div>
         </section>

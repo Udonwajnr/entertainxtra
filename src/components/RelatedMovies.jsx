@@ -10,7 +10,7 @@ export default function RelatedMovies({genre,movie}){
             </div>
             <div className="flex justify-start gap-x-3 gap-y-3 flex-wrap lg:justify-around mt-5">
                 {
-                    movie.filter((movie)=>{
+                    movie?.filter((movie)=>{
                         return movie.genre[0].includes(" Action") == genre[0].includes(" Action")
                     })?.map((movie)=>{
                      return(
