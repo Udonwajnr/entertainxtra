@@ -10,7 +10,6 @@ export default function LatestSeries(){
     const [loading,setLoading] = useState(true)
 
     const getSeries =async()=>{    
-
         try{
             axios.get(
                 // "http://localhost:5000/api/episodes"

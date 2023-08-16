@@ -24,7 +24,6 @@ export default function Movies(){
             console.log("couldn't fetch data")
         }
     }
-
     useEffect(()=>{
         getMovies()
     },[])

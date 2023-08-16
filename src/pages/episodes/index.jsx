@@ -41,7 +41,7 @@ export default function Episodes(){
     return(
         <section className="mt-20 px-8 lg:px-2">
             <div className="flex justify-between mt-5">
-                    <h2 className="text-white text-3xl lg:text-xl">Released Latest Episodes</h2>
+                    <h2 className="text-white text-3xl lg:text-xl">Newly Added Episodes</h2>
                     <button onClick={toggle} className="flex gap-x-1 items-center text-xl border bg-white p-2 lg:p-0.5 rounded-md lg:text-sm">
                         <BiFilter size={25} />
                         Filters
