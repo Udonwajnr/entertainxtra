@@ -88,9 +88,9 @@ export default function MovieDescription({title,image,year,video_quality,trailer
                 <button className="bg-red text-center justify-center px-7 lg:px-3 lg:rounded-md py-2.5 text-xl flex items-center gap-x-2 lg:text-xs" onClick={playTrailer}><BiCameraMovie className='w-7 h-7 lg:w-5 lg:h-5'/> Trailer</button>
                 <RWebShare
                 data={{
-                    text: "Web Share - GfG",
+                    text: "",
                     url: `https://entertainxtra-as65.vercel.app/movies/details/${uuid}`,
-                    title: "GfG",
+                    title: title,
                 }}
                 onClick={() => console.log("shared successfully!")}
             >
