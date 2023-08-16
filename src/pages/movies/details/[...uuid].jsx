@@ -11,7 +11,6 @@ export default function Description(){
     const router = useRouter()
     const {uuid} = router.query
 
-
     const getMoviesDetails =async()=>{
         try{
             await axios.get(`https://api-cnl3.onrender.com/api/movies/${uuid}`)
@@ -23,7 +22,6 @@ export default function Description(){
             console.log("couldn't fetch data")
         }
     }
-
     const getMovies=async()=>{
         try{
             await axios.get(`https://api-cnl3.onrender.com/api/movies`)
@@ -47,7 +45,6 @@ export default function Description(){
     return(
         <main>
             <div className=''>
-                {/* video player ending */}
                 {
                     !loading?
                     moviesDetails.map((moviesDetails,index)=>{

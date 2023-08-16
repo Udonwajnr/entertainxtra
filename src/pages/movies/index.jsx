@@ -6,6 +6,7 @@ import axios from "axios"
 import 'react-loading-skeleton/dist/skeleton.css'
 import LoadingSkeleton from "@/components/Loading"
 
+
 export default function Movies(){
     const [active, setActive] = useState(false)
     const [movies,setMovies] = useState([])
@@ -58,7 +59,6 @@ export default function Movies(){
                         })
                         :                        
                             <LoadingSkeleton/>
-                            // count={4}
                     }
             </div>
             </section>
