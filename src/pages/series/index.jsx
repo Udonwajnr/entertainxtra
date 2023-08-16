@@ -1,14 +1,36 @@
 import {BiFilter} from 'react-icons/bi'
 import SeriesCard from "@/components/SeriesCard"
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import SeriesFilter from '@/components/SeriesFilter'
+import LoadingSkeleton from '@/components/Loading'
+import SeasonalCard from '@/components/SeasonalCard'
+import axios from 'axios'
 
 export default function Series(){
     const [active,setActive] = useState('')
+    const [loading,setLoading] = useState(true)
+    const [seasonal,setSeasonal] = useState([])
+
+    const getSeasonal =async()=>{    
+        try{
+        axios.get("https://api-cnl3.onrender.com/api/seasonal")
+        .then((res)=>{
+                setLoading(false)
+                setSeasonal(res.data.seasonal)            
+         })
+        }catch(error){
+            console.log("couldn't fetch data")
+            setLoading(true)
+        }
+    }
+    useEffect(()=>{
+        getSeasonal()
+    },[])
 
     const toggle=()=>{
         setActive(!active)
     }
+
     return (
         <main>
             <section className='px-8 py-5 lg:px-2'>
@@ -29,16 +51,20 @@ export default function Series(){
                 </div>
 
             
-                <div className="grid grid-cols-fluid gap-4 sm:grid-cols-2 mt-5">
-                <SeriesCard/>
-                <SeriesCard/>
-                <SeriesCard/>
-                <SeriesCard/>
-                <SeriesCard/>
-                <SeriesCard/>
-                <SeriesCard/>
-                <SeriesCard/>
-                </div>
+                <div className="flex justify-center  flex-wrap gap-x-3 gap-y-3 mt-5">
+        {
+               !loading
+                 ?
+                    seasonal.map((seasonal,index)=>{
+                        return(
+                            <SeasonalCard key={index} {...seasonal}/>
+                        )
+                    })
+                    :                        
+                        <LoadingSkeleton/>
+                        // count={4}
+            }
+        </div>
             </section>
         </main>
     )

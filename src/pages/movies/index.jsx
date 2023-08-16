@@ -47,7 +47,7 @@ export default function Movies(){
                         <MovieFilter/>
                     }
                 </div>
-                <div className="flex justify-center  flex-wrap gap-x-3 gap-y-3 mt-5">
+                <div className="flex justify-center flex-wrap gap-x-3 gap-y-3 mt-5">
                     {
                    !loading
                      ?

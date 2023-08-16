@@ -45,33 +45,45 @@ export default function Navbar({active, toggle, toggleSearchBar}){
                         </li>
                         
                         <li>
+                            <Link href={'/episodes'} className="flex items-center gap-x-2 text-white hover:text-red duration-150">
+                            <BiTv size={25}/>
+                            Episodes
+                            </Link>
+                        </li>
+
+                        {/* <li>
                             <Link href={'/contact'} className="flex items-center gap-x-2 text-white hover:text-red duration-150">
                             <AiOutlineMail size={25}/>
                             Contact Us
                             </Link>
-                        </li>
-                        <li>
-                            <Link href={'/search'} className="flex items-center gap-x-2 text-white hover:text-red duration-150">
-                            <AiOutlineSearch size={25}/>
-                            Search
-                            </Link>
-                        </li>
+                        </li> */}
+                        
                     </ul>
                 </div>
 
-                <div className="lg:hidden">
+                {/* <div className="lg:hidden">
                     <ul className="flex gap-x-3">
                         <li><Link href={'/register'} className="text-white hover:text-red duration-150">Register</Link></li>
                         <li><Link href={'/login'} className="text-white hover:text-red duration-150">Login</Link></li>
                     </ul>
-                </div>
+                </div> */}
+                        <div>
+                            <ul>
+                                <li>
+                                    <Link href={'/search'} className="flex items-center gap-x-2 text-white hover:text-red duration-150">
+                                    <AiOutlineSearch size={25}/>
+                                    Search
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
 
-                <div className="hidden lg:block">
+                {/* <div className="hidden lg:block">
                     <Link href={'/login'} className="flex items-center gap-x-2 text-white
                             hover:text-red duration-150 text-lg cursor-pointer">
                         <AiOutlineUser className="w-7 h-7 lg:w-5 lg:h-5 "/>
                     </Link>
-                </div>
+                </div> */}
             </nav>
         </header>
     )
