@@ -5,6 +5,7 @@ import MovieFilter from "@/components/MovieFilter"
 import axios from "axios"
 import 'react-loading-skeleton/dist/skeleton.css'
 import LoadingSkeleton from "@/components/Loading"
+import Filter from "@/components/FIlter"
 
 
 export default function Movies(){
@@ -45,7 +46,7 @@ export default function Movies(){
                     {
                         active
                         &&
-                        <MovieFilter/>
+                        <Filter/>
                     }
                 </div>
                 <div className="flex justify-center flex-wrap gap-x-3 gap-y-3 mt-5">

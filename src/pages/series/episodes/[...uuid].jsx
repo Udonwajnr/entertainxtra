@@ -24,7 +24,6 @@ export default function SeasonalEpisodes(){
             console.log("couldn't fetch data")
         }
     }
-
     useEffect(()=>{
         getSeasonalEpisodes()
     },[])
@@ -44,7 +43,6 @@ export default function SeasonalEpisodes(){
                         })
                         :                        
                             <LoadingSkeleton/>
-                            // count={4}
                 }
             </div>
         </section>
