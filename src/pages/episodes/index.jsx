@@ -11,6 +11,8 @@ export default function Episodes(){
     const [episode,setEpisode] = useState([])
     const [searchEpisode,setSearchEpisode] = useState("")
     const [loading,setLoading] = useState(true)
+    const postPerPage = 30
+    const [next ,setNext]=useState(postPerPage) 
 
     const getEPisodes =async()=>{    
 
@@ -33,6 +35,10 @@ export default function Episodes(){
     const toggle =()=>{
         return setActive(!active)
         }
+
+        const handleMoreImage = () => {
+            setNext(next + postPerPage);
+        };
 
     useEffect(()=>{
         getEPisodes()
@@ -58,7 +64,7 @@ export default function Episodes(){
             {
                    !loading
                      ?
-                        episode.map((episode,index)=>{
+                        episode.slice(0,next).map((episode,index)=>{
                             return(
                                 <SeriesCard key={index} {...episode} />
                             )
@@ -68,6 +74,13 @@ export default function Episodes(){
                             // count={4}
                 }
             </div>
+            {
+                next < episode?.length
+                 &&
+            <div className="flex justify-center items-center mt-4">
+                <button onClick={handleMoreImage} className="text-white bg-rose-600 py-2 px-4 text-lg font-bold hover:bg-rose-700">Load More</button>
+            </div>
+            }
         </section>       
     )
 }

@@ -12,6 +12,9 @@ export default function Movies(){
     const [active, setActive] = useState(false)
     const [movies,setMovies] = useState([])
     const [loading,setLoading] = useState(true)
+    const postPerPage = 30
+    const [next ,setNext]=useState(postPerPage) 
+
 
     const getMovies =async()=>{
         try{
@@ -24,9 +27,16 @@ export default function Movies(){
             console.log("couldn't fetch data")
         }
     }
+    
+    const handleMoreImage = () => {
+        setNext(next + postPerPage);
+    };
+
     useEffect(()=>{
         getMovies()
     },[])
+
+
 
     const toggle =()=>{
     return setActive(!active)
@@ -52,7 +62,7 @@ export default function Movies(){
                     {
                    !loading
                      ?
-                        movies.map((movie,index)=>{
+                    movies.slice(0,next).map((movie,index)=>{
                             return(
                                 <MovieCard key={index} {...movie} movie={movie} />
                             )
@@ -61,6 +71,14 @@ export default function Movies(){
                             <LoadingSkeleton/>
                     }
             </div>
+            {
+                next < movies?.length
+                 &&
+            <div className="flex justify-center items-center mt-4">
+                <button onClick={handleMoreImage} className="text-white bg-rose-600 py-2 px-4 text-lg font-bold hover:bg-rose-700">Load More</button>
+            </div>
+            }
+
             </section>
         </main>
     )

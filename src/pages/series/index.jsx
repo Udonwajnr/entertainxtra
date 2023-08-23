@@ -10,6 +10,9 @@ export default function Series(){
     const [active,setActive] = useState('')
     const [loading,setLoading] = useState(true)
     const [seasonal,setSeasonal] = useState([])
+    const postPerPage = 30
+    const [next ,setNext]=useState(postPerPage) 
+
 
     const getSeasonal =async()=>{    
         try{
@@ -30,6 +33,10 @@ export default function Series(){
     const toggle=()=>{
         setActive(!active)
     }
+
+    const handleMoreImage = () => {
+        setNext(next + postPerPage);
+    };
 
     return (
         <main>
@@ -55,7 +62,7 @@ export default function Series(){
         {
                !loading
                  ?
-                    seasonal.map((seasonal,index)=>{
+                    seasonal.slice(0,next).map((seasonal,index)=>{
                         return(
                             <SeasonalCard key={index} {...seasonal}/>
                         )
@@ -65,6 +72,14 @@ export default function Series(){
                         // count={4}
             }
         </div>
+        {
+                next<seasonal?.length
+                 &&
+            <div className="flex justify-center items-center mt-4">
+                <button onClick={handleMoreImage} className="text-white bg-rose-600 py-2 px-4 text-lg font-bold hover:bg-rose-700">Load More</button>
+            </div>
+            }
+        
             </section>
         </main>
     )
