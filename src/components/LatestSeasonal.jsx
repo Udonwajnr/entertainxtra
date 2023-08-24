@@ -34,7 +34,7 @@ export default function LatestSeasonal(){
         {
                !loading
                  ?
-                    seasonal.map((seasonal,index)=>{
+                    seasonal.slice(0,30).map((seasonal,index)=>{
                         return(
                             <SeasonalCard key={index} {...seasonal}/>
                         )

@@ -40,7 +40,7 @@ export default function LatestSeries(){
             {
                    !loading
                      ?
-                        episode.map((episode,index)=>{
+                        episode.slice(0,30).map((episode,index)=>{
                             return(
                                 <SeriesCard key={index} {...episode} />
                             )
