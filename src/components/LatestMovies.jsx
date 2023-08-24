@@ -32,7 +32,7 @@ export default function LatestMovies(){
                     {
                    !loading
                      ?
-                        movies.map((movie,index)=>{
+                        movies.slice(0,30).map((movie,index)=>{
                             return(
                                 <MovieCard key={index} {...movie} movie={movie} />
                             )
