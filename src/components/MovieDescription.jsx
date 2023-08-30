@@ -51,9 +51,9 @@ export default function MovieDescription({title,image,year,video_quality,trailer
                       <h3 className='font-bold text-2xl lg:text-base'>Genre</h3>
                       <span className='lg:text-base'>
                       {
-                        genre?.map((actor,index)=>{
+                        genre?.map((genre,index)=>{
                           return(
-                            <span key={index}>{actor.join(' , ')}</span>
+                            <span key={index}>{genre.join(' , ')}</span>
                           )
                         })
                       }

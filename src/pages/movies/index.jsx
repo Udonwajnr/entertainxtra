@@ -14,6 +14,7 @@ export default function Movies(){
     const [loading,setLoading] = useState(true)
     const postPerPage = 30
     const [next ,setNext]=useState(postPerPage) 
+    const [filterOptions,setFilterOption]= useState("All")
 
 
     const getMovies =async()=>{
@@ -32,15 +33,26 @@ export default function Movies(){
         setNext(next + postPerPage);
     };
 
+    const filterOptionsButton=(e)=>{
+        const booleanCheckValue = e.target.checked
+        const value = e.target.value
+        if(booleanCheckValue === true){
+            setFilterOption(value)
+        }
+        else{
+            setFilterOption('All')
+        }
+        
+    }   
+    
     useEffect(()=>{
         getMovies()
     },[])
-
-
-
+    console.log(filterOptions)
     const toggle =()=>{
     return setActive(!active)
     }
+    // console.log(movies[0].year)
     return (
         <main className="">
             <section className="px-8 py-5 lg:px-2">
@@ -55,14 +67,21 @@ export default function Movies(){
                     {
                         active
                         &&
-                        <Filter/>
+                        <Filter filterOptionsButton={filterOptionsButton} />
                     }
                 </div>
                 <div className="flex justify-center flex-wrap gap-x-3 gap-y-3 mt-5">
                     {
                    !loading
                      ?
-                    movies.slice(0,next).map((movie,index)=>{
+                    movies.filter((movie)=>{
+                        if(filterOptions === "All"){
+                            return movie
+                        }
+                        else{
+                            return movie.genre[0].includes(filterOptions)
+                        }
+                    })?.slice(0,next).map((movie,index)=>{
                             return(
                                 <MovieCard key={index} {...movie} movie={movie} />
                             )

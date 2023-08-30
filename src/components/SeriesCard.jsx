@@ -4,7 +4,7 @@ export default function SeriesCard({title,year,video_quality,image,uuid}){
         <>
     <Link href={`/episodes/details/${uuid}`}>
       <div className='text-white max-w-[160px]'>
-          <div className='flex '>
+          <div className='flex h-60'>
                 <img src={image} alt="Series Name" className='w-full h-full' />
           </div>
           <div>

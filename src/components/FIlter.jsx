@@ -1,4 +1,4 @@
-export default function Filter(){
+export default function Filter({filterOptionsButton,checkedStatus}){
     return(
         <>
                 <div className="bg-light-black flex flex-col gap-y-6 p-5 mt-4">
@@ -7,19 +7,19 @@ export default function Filter(){
                     <label htmlFor="" className="text-white text-xl">Genre:</label>
                     <div className="text-white flex items-center gap-x-5 flex-wrap">
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'Action'} onChange={filterOptionsButton} />
                             Action
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'comedy'} onChange={filterOptionsButton}/>
                             Comedy
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox"  value={'Romance'} onChange={filterOptionsButton}/>
                             Romance
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'thriller'} onChange={filterOptionsButton}/>
                             Thriller
                         </div>
                     </div>
@@ -30,19 +30,19 @@ export default function Filter(){
                     <label htmlFor="" className="text-white text-xl">Year:</label>
                     <div className="text-white flex flex-wrap items-center gap-x-5">
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'2020'} />
                             2020
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'2021'} />
                             2021
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'2022'} />
                             2022
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'2023'} />
                             2023
                         </div>
                     </div>
@@ -53,19 +53,19 @@ export default function Filter(){
                     <label htmlFor="" className="text-white text-xl">Quality:</label>
                     <div className="text-white flex flex-wrap items-center gap-x-5">
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'all'} />
                             All
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'hd'} />
                             HD
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'sd'} />
                             SD
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'action'} />
+                            <input type="checkbox" value={'cam'} />
                             CAM
                         </div>
                     </div>

@@ -5,7 +5,7 @@ export default function SeasonalCard({title,image,year,video_quality ,uuid}){
         <>
         <Link  href={`/series/episodes/${uuid}`}>
           <div className='text-white max-w-[160px]'>
-              <div className='flex'>
+              <div className='flex h-60'>
                     <img src={image} alt="Movie Name" className='w-full h-full' />
               </div>
               <div>
