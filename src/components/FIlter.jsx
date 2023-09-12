@@ -1,4 +1,4 @@
-export default function Filter({filterOptionsButton,checkedStatus}){
+export default function Filter({filterOptionsButton,filterYearButton}){
     return(
         <>
                 <div className="bg-light-black flex flex-col gap-y-6 p-5 mt-4">
@@ -11,11 +11,11 @@ export default function Filter({filterOptionsButton,checkedStatus}){
                             Action
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'comedy'} onChange={filterOptionsButton}/>
+                            <input type="checkbox" value={'Comedy'} onChange={filterOptionsButton}/>
                             Comedy
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox"  value={'Romance'} onChange={filterOptionsButton}/>
+                            <input type="checkbox"  value={' Romance'} onChange={filterOptionsButton}/>
                             Romance
                         </div>
                         <div className="flex items-center gap-x-2">
@@ -30,19 +30,19 @@ export default function Filter({filterOptionsButton,checkedStatus}){
                     <label htmlFor="" className="text-white text-xl">Year:</label>
                     <div className="text-white flex flex-wrap items-center gap-x-5">
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'2020'} />
+                            <input type="checkbox" value={'2020'} onChange={filterYearButton}/>
                             2020
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'2021'} />
+                            <input type="checkbox" value={'2021'} onChange={filterYearButton}/>
                             2021
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'2022'} />
+                            <input type="checkbox" value={"2022"} onChange={filterYearButton}/>
                             2022
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <input type="checkbox" value={'2023'} />
+                            <input type="checkbox" value={'2023'} onChange={filterYearButton}/>
                             2023
                         </div>
                     </div>

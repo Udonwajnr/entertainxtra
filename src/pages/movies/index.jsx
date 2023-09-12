@@ -14,8 +14,10 @@ export default function Movies(){
     const [loading,setLoading] = useState(true)
     const postPerPage = 30
     const [next ,setNext]=useState(postPerPage) 
-    const [filterOptions,setFilterOption]= useState("All")
-
+    const [filterOptions,setFilterOption]= useState(null)
+    const [filterYearOption,setFilterYearOption] = useState(null)
+    const [filterQualityOption,setFilterQualityOption] = useState("")
+    const [country,setCountry] = useState('')
 
     const getMovies =async()=>{
         try{
@@ -33,6 +35,7 @@ export default function Movies(){
         setNext(next + postPerPage);
     };
 
+    // genre
     const filterOptionsButton=(e)=>{
         const booleanCheckValue = e.target.checked
         const value = e.target.value
@@ -40,7 +43,19 @@ export default function Movies(){
             setFilterOption(value)
         }
         else{
-            setFilterOption('All')
+            setFilterOption(null)
+        }
+        
+    }   
+
+    const filterYearButton=(e)=>{
+        const booleanCheckValue = e.target.checked
+        const value = e.target.value
+        if(booleanCheckValue === true){
+            setFilterYearOption(value)
+        }
+        else{
+            setFilterYearOption(null)
         }
         
     }   
@@ -48,10 +63,11 @@ export default function Movies(){
     useEffect(()=>{
         getMovies()
     },[])
-    console.log(filterOptions)
+    console.log(filterYearOption)
     const toggle =()=>{
     return setActive(!active)
     }
+    console.log(filterOptions)
     // console.log(movies[0].year)
     return (
         <main className="">
@@ -67,7 +83,7 @@ export default function Movies(){
                     {
                         active
                         &&
-                        <Filter filterOptionsButton={filterOptionsButton} />
+                        <Filter filterOptionsButton={filterOptionsButton}  filterYearButton={filterYearButton}/>
                     }
                 </div>
                 <div className="flex justify-center flex-wrap gap-x-3 gap-y-3 mt-5">
@@ -75,12 +91,15 @@ export default function Movies(){
                    !loading
                      ?
                     movies.filter((movie)=>{
-                        if(filterOptions === "All"){
+                        if(filterOptions === null && filterYearOption === null){
                             return movie
                         }
-                        else{
-                            return movie.genre[0].includes(filterOptions)
+                        else if(filterOptions){
+                           return movie.genre[0].includes(filterOptions) 
                         }
+                        // else{
+                        //     return (movie.year.includes(filterYearOption) && movie.genre[0].includes(filterOptions)) 
+                        // }
                     })?.slice(0,next).map((movie,index)=>{
                             return(
                                 <MovieCard key={index} {...movie} movie={movie} />
