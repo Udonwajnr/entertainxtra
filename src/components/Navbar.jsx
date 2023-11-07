@@ -61,12 +61,12 @@ export default function Navbar({active, toggle, toggleSearchBar}){
                     </ul>
                 </div>
 
-                <div className="lg:hidden">
+                {/* <div className="lg:hidden">
                     <ul className="flex gap-x-3">
                         <li><Link href={'/register'} className="text-white hover:text-red duration-150">Register</Link></li>
                         <li><Link href={'/login'} className="text-white hover:text-red duration-150">Login</Link></li>
                     </ul>
-                </div>
+                </div> */}
                         <div>
                             <ul>
                                 <li>
