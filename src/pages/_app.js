@@ -11,8 +11,6 @@ export default function App({ Component, pageProps }) {
     setActive(!active)
   }
 
-  
-
   return(
   <>
     <Navbar toggle={toggle} active={active} />

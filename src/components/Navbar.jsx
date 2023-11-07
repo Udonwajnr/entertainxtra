@@ -51,12 +51,12 @@ export default function Navbar({active, toggle, toggleSearchBar}){
                             </Link>
                         </li>
 
-                        {/* <li>
+                        <li>
                             <Link href={'/contact'} className="flex items-center gap-x-2 text-white hover:text-red duration-150">
                             <AiOutlineMail size={25}/>
                             Contact Us
                             </Link>
-                        </li> */}
+                        </li>
                         
                     </ul>
                 </div>
