@@ -12,7 +12,7 @@ export default function Contact(){
     const submitContact = async(e)=>{
         e.preventDefault()
         const data = {name,email,subject,message}
-        axios.post("http://localhost:5000/api/contact",data)
+        axios.post("https://api-cnl3.onrender.com/api/contact",data)
         .then((data)=>{
             toast.success('Submitted', {
                 position: "top-right",
